@@ -9,4 +9,11 @@ Unfortunately both have some limitations, thus the desire for a common interface
 
 ## Installing
 
-TBS
+Note that AKGOSProcess does NOT load OSProcess or OSSubprocess, it is up to you to ensure that the appropriate package is loaded BEFORE using AKGOSProcess.
+
+```smalltalk
+Metacello new
+	repository: 'github://akgrant43/pharo-akgosprocess/mc';
+	baseline: 'AKGOSProcess';
+	load
+```
