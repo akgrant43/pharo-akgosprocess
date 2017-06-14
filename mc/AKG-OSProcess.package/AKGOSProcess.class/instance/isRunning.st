@@ -1,0 +1,4 @@
+testing
+isRunning
+
+	^osProcess isRunning

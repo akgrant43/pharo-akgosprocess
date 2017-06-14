@@ -1,0 +1,21 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "AKG-OSProcess",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"command",
+		"arguments",
+		"process",
+		"semaphore",
+		"stdout",
+		"stderr",
+		"errorOutput",
+		"errorBlock",
+		"osProcess"
+	],
+	"name" : "AKGOSProcess",
+	"type" : "normal"
+}

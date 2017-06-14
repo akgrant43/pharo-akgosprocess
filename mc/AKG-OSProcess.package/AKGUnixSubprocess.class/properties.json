@@ -1,0 +1,19 @@
+{
+	"commentStamp" : "AlistairGrant 3/23/2017 21:59",
+	"super" : "Object",
+	"category" : "AKG-OSProcess",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"command",
+		"arguments",
+		"process",
+		"semaphore",
+		"stdout",
+		"stderr",
+		"errorBlock"
+	],
+	"name" : "AKGUnixSubprocess",
+	"type" : "normal"
+}
