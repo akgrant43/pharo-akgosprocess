@@ -8,6 +8,7 @@ baseline: spec
 		spec blessing: #baseline.
 		
 		spec
+			package: #'AKG-OSProcess';
 			group: 'Core' with: #(#'AKG-OSProcess');
 			group: 'all' with: #(#Core);
 			group: 'default' with: #(#all).
