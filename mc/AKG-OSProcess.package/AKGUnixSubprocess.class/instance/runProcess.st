@@ -5,7 +5,8 @@ runProcess
 	[ | stdoutStream stderrStream |
 	stdoutStream := String new writeStream.
 	stderrStream := String new writeStream.
-	OSSUnixSubprocess new
+	process := OSSUnixSubprocess new.
+	process
 		command: command;
 		arguments: arguments;
 		redirectStdout;
@@ -16,7 +17,6 @@ runProcess
 			stderrStream nextPutAll: errStream upToEnd ]
 			onExitDo: [ :proc :outStream :errStream | 
 				proc closeAndCleanStreams.
-				process := proc.
 				stdout := stdoutStream contents.
 				stderr := stderrStream contents.
 				"Async processes have errors signalled here.
