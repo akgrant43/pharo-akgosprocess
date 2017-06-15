@@ -11,9 +11,33 @@ Unfortunately both have some limitations, thus the desire for a common interface
 
 Note that AKGOSProcess does NOT load OSProcess or OSSubprocess, it is up to you to ensure that the appropriate package is loaded BEFORE using AKGOSProcess.
 
+Load OSProcess:
+
+```smalltalk
+Metacello new
+	configuration: 'OSProcess';
+	version: #stable;
+	repository: 'http://smalltalkhub.com/mc/Pharo/MetaRepoForPharo50/main';
+	load.
+```
+
+or OSSubprocess:
+
+```smalltalk
+Metacello new
+	configuration: 'OSSubprocess';
+	repository: 'github://marianopeck/OSSubprocess:master/repository';
+	version: #stable;
+	load.
+```
+
+Currently I use OSProcess with 64 bit images and OSSubprocess with 32 bit images.
+
+And finally pharo-akgosprocess:
+
 ```smalltalk
 Metacello new
 	repository: 'github://akgrant43/pharo-akgosprocess/mc';
 	baseline: 'AKGOSProcess';
-	load
+	load.
 ```
