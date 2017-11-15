@@ -6,6 +6,8 @@ runProcess
 	stdoutStream := String new writeStream.
 	stderrStream := String new writeStream.
 	process := OSSUnixSubprocess new.
+	workingDirectory ifNotNil: [ 
+		process workingDirectory: workingDirectory ].
 	process
 		command: command;
 		arguments: arguments;
