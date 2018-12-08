@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "AlistairGrant 12/8/2018 16:33",
+	"super" : "Error",
+	"category" : "AKG-OSProcess",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"process"
+	],
+	"name" : "SubprocessError",
+	"type" : "normal"
+}
