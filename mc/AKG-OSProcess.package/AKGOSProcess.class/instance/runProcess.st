@@ -13,7 +13,6 @@ runProcess
 			errorPipelineStream: InternalPipe nonBlockingPipe.
 		osProcess value.
 		(Delay forMilliseconds: 500) wait.
-"		[ osProcess atEnd and: [ osProcess isComplete ] ] whileFalse:"
 		[ osProcess isComplete ] whileFalse:
 			[
 			outStream nextPutAll: osProcess upToEnd.
@@ -22,8 +21,8 @@ runProcess
 			].
 			outStream nextPutAll: osProcess upToEnd.
 			errStream nextPutAll: osProcess errorUpToEnd.
-			stdout := outStream contents.
-			stderr := errStream contents.
+			stdout := outStream contents asByteArray utf8Decoded.
+			stderr := errStream contents asByteArray utf8Decoded.
 			semaphore
 				ifNil: [ (errorBlock isNotNil and: [ self isSuccess not ])
 					ifTrue: [ errorBlock value: self ] ]
