@@ -5,8 +5,7 @@ runProcess
 	[ | stdoutStream stderrStream |
 	stdoutStream := String new writeStream.
 	stderrStream := String new writeStream.
-	process := OSSUnixSubprocess new.
-	process
+	self process
 		command: command;
 		arguments: arguments;
 		redirectStdout;
